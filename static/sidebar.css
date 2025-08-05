@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #f0f4f8;
+}
+
+.sidebar {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    height: calc(100vh - 80px);
+    width: 60px;
+    background-color: #ADD8E6;
+    color: white;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 25px;
+    border: 2px dotted #4a90e2;
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 220px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 23px 0;
+    white-space: nowrap;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 10px;
+}
+
+.menu li a i {
+    min-width: 20px;
+    font-size: 18px;
+}
+
+/* Hide text initially; show icons only */
+.menu li a span {
+    display: none;
+    flex-grow: 1;
+    position: relative;
+}
+
+/* Submenu arrow spacing and size */
+.submenu-icon {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Show text on hover */
+.sidebar:hover .menu li a span {
+    display: inline-block;
+}
+
+/* Contact section */
+.contact {
+    font-size: 14px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.1s;
+}
+
+.sidebar:hover .phone {
+    opacity: 1;
+}
+
+.phone i {
+    color: #2e75bb;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.1s;
+}
+
+.sidebar:hover .social-icons {
+    opacity: 1;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #2e75bb;
+}

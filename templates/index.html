@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Website</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8" />
+    <title>Landing Page with Floating Sidebar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='sidebar.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is served with Python Flask, running in GitHub Codespaces.</p>
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="#home"><i class="fas fa-home"></i><span>HOME</span></a></li>
+            <li><a href="#qualification"><i class="fas fa-user-graduate"></i><span>QUALIFICATION</span></a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i><span>EXPERIENCE</span></a></li>
+            <li><a href="#research"><i class="fas fa-flask"></i><span>RESEARCH</span></a></li>
+            <li><a href="#intellectual-property"><i class="fas fa-lightbulb"></i><span>INTELLECTUAL PROPERTY</span></a></li>
+            <li><a href="#associations"><i class="fas fa-users"></i><span>ASSOCIATIONS</span></a></li>
+            <li><a href="#award-citation"><i class="fas fa-award"></i><span>AWARD & CITATION</span></a></li>
+            <li><a href="#talks"><i class="fas fa-microphone"></i><span>TALKS</span></a></li>
+        </ul>
+        <div class="contact">
+            <div class="phone"><i class="fas fa-phone"></i> +91-9878327635</div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fas fa-rss"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content simple-sections">
+        <section id="home" class="section home-hero">
+            <div class="home-flex">
+                <div class="home-photo">
+                    <img src="{{ url_for('static', filename='anand.png') }}" alt="Anand Nayyar image">
+                </div>
+                <div class="home-bio">
+                    <div class="hey-there">Hey There!</div>
+                    <div class="anand-name">Anand Nayyar</div>
+                    <div class="anand-title">I'm <span class="typed">Inventor</span></div>
+                    <div class="anand-desc">
+                        Dr. Anand Nayyar received Ph.D (Computer Science) from Desh Bhagat University in 2017 in the area of Wireless Sensor Networks, Swarm Intelligence and Network Simulation. He is currently working in School of Computer Science-Duy Tan University, Da Nang, Vietnam as Professor, Scientist, Vice-Chairman (Research) and Director- IoT and Intelligent Systems Lab. A Certified Professional with 125+ Professional certificates. Published more than 160+ Research Papers in various High-Quality ISI-SCI/SCIE/SSCI Impact Factor Journals cum Scopus/ESCI indexed Journals, 70+ Papers in International Conferences indexed with Springer, IEEE and ACM Digital Library, 50+ Book Chapters with Citations: 10000+, H-Index: 55 and I-Index: 190. He has 18 Australian Patents, 6 German Patents, 4 Japanese Patents, 33 Indian Design cum Utility Patents, 1 USA Patent, 3 Indian Copyrights and 2 Canadian Copyrights to his credit. Awarded 44 Awards for Teaching and Research. He is listed in Top 2% Scientists as per Stanford University (2020, 2021, 2022). He is Acting as Editor-in-Chief of GI-Global, USA Journal “International Journal of Smart Vehicles and Smart Transportation (IJSVST)”, and Managing Editor “IJKSS”- Scopus Q3 Indexed.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="qualification" class="section">
+            <h2><i class="fas fa-user-graduate"></i> Qualification</h2>
+            <p>Details about qualifications and education will be placed here.</p>
+        </section>
+        <section id="experience" class="section">
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            <p>Professional experience section content.</p>
+        </section>
+        <section id="research" class="section">
+            <h2><i class="fas fa-flask"></i> Research</h2>
+            <p>Latest research topics and contributions.</p>
+        </section>
+        <section id="intellectual-property" class="section">
+            <h2><i class="fas fa-lightbulb"></i> Intellectual Property</h2>
+            <p>Intellectual properties, patents, and copyrights.</p>
+        </section>
+        <section id="associations" class="section">
+            <h2><i class="fas fa-users"></i> Associations</h2>
+            <p>Professional associations and memberships.</p>
+        </section>
+        <section id="award-citation" class="section">
+            <h2><i class="fas fa-award"></i> Award & Citation</h2>
+            <p>Awards and citations achieved along the journey.</p>
+        </section>
+        <section id="talks" class="section">
+            <h2><i class="fas fa-microphone"></i> Talks</h2>
+            <p>Invited talks, presentations, and seminars delivered.</p>
+        </section>
+    </div>
 </body>
 </html>
