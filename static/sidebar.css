@@ -10,7 +10,7 @@ body {
     position: fixed;
     top: 40px;
     left: 20px;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 150px);
     width: 60px;
     background-color: #ADD8E6;
     color: white;

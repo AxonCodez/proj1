@@ -181,14 +181,12 @@
     transition: transform 0.5s cubic-bezier(.22,.68,.64,1.25), box-shadow 0.5s;
 }
 
-/* Spatial animation on image hover */
 .home-photo:hover img,
 .home-photo:focus img {
     transform: scale(1.06) rotateY(6deg);
     box-shadow: 0 12px 40px 0 rgba(72, 176, 238, 0.22), 0 6px 20px 0 rgba(43,85,146,0.13);
 }
 
-/* Home text */
 .home-bio {
     flex: 1;
     display: flex;
@@ -196,7 +194,6 @@
     justify-content: flex-start;
     padding-top: 12px;
     background: transparent;
-    transition: box-shadow 0.3s;
     border-radius: 9px;
     cursor: pointer;
 }
@@ -216,6 +213,13 @@
     margin-bottom: 2px;
     line-height: 1.1;
     font-family: 'Montserrat', Arial, sans-serif;
+    transition: transform 0.28s cubic-bezier(.34,.91,.6,1.39), color 0.28s;
+    display: inline-block;
+}
+
+.home-bio:hover .anand-name {
+    transform: scale(1.13);
+    color: #47a4ee;
 }
 
 .anand-title {
@@ -236,35 +240,6 @@
     line-height: 1.7;
     text-align: justify;
     font-family: 'Montserrat', Arial, sans-serif;
-}
-
-/* Animated text on bio hover */
-.home-bio:hover .hey-there,
-.home-bio:focus .hey-there,
-.home-bio:hover .anand-name,
-.home-bio:focus .anand-name,
-.home-bio:hover .anand-title,
-.home-bio:focus .anand-title,
-.home-bio:hover .anand-desc,
-.home-bio:focus .anand-desc {
-    animation: fadeRight .6s both;
-}
-
-@keyframes fadeRight {
-    from {
-        opacity: 0;
-        transform: translateX(18px) scale(0.98);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-}
-
-.home-bio:hover {
-    box-shadow: 0 8px 32px 0 rgba(44, 126, 175, 0.10);
-    background: rgba(217, 240, 250, 0.20);
-    transition: background 0.3s, box-shadow 0.3s;
 }
 
 @media (max-width: 900px) {
