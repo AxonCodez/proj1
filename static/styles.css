@@ -279,3 +279,58 @@
         font-size: 14px;
     }
 }
+
+.anand-title {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222f40;
+  letter-spacing: -1px;
+}
+.anand-title #effect-inventor {
+  color: #2561a6;
+  font-family: "Unica One", "Montserrat", Arial, sans-serif;
+}
+
+html {
+  cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  margin-left: -24px;
+  margin-top: -24px;
+  border: 3px solid #2561a6; /* Blue themed */
+  border-radius: 100px;
+  z-index: 9999;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  mix-blend-mode: exclusion;
+  background: transparent;
+}
+
+.cursor.is-moving {
+  transform: scale(0.7);
+  transition: transform 0.3s cubic-bezier(.32,2,.55,.27);
+}
+
+*,
+html,
+body {
+    cursor: none !important;
+}
+
+#background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: block;
+  pointer-events: none; /* So it doesn't block clicks */
+}
